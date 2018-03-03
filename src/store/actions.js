@@ -1,13 +1,13 @@
 /*
 * @Author: yuki
 * @Date:   2018-02-06 01:46:09
-* @Last Modified by:   yuki
-* @Last Modified time: 2018-02-25 19:02:15
+* @Last Modified by:   yukiiyong
+* @Last Modified time: 2018-03-03 19:43:07
 */
 import * as types from './mutation-type'
 import {playMode} from 'common/js/config'
 import {shuffle} from 'common/js/util'
-import {saveSearch, clearSearch, deleteSearch, savePlay, saveFavorite, deleteFavoite} from 'common/js/cache'
+import {saveSearch, clearSearch, deleteSearch, savePlay, saveFavorite, deleteFavorite} from 'common/js/cache'
 
 function findIndex(list, song) {
 	return list.findIndex((item) => {

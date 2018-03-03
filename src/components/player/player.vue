@@ -325,6 +325,7 @@
         if(!this.touch.initiated) {
           return 
         }
+        //cdWrapper的透明度随滑动的变化而变化，并向左移/右移
         const touch = e.touches[0]
         const deltaX = touch.pageX - this.touch.startX
         const deltaY = touch.pageY - this.touch.startY

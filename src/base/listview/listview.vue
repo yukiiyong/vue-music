@@ -141,12 +141,13 @@
           if(-newY >= height1 && -newY < height2){
             this.currentIndex = i
             this.diff = height2 + newY
+            console.log('diff'+this.diff+'newY'+newY)
             return
           }
         }
         this.currentIndex = listHeight.length -2
       },
-      diff(newVal) {
+      diff(newVal) { //用于设置fixedTitle样式及位置
         let fixedTop = (newVal > 0 && newVal <TITLE_HEIGHT) ? newVal - TITLE_HEIGHT : 0
         if(this.fixed === fixedTop){
           return

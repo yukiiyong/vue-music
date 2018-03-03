@@ -1,8 +1,8 @@
 /*
 * @Author: yuki
 * @Date:   2018-02-22 22:19:34
-* @Last Modified by:   yuki
-* @Last Modified time: 2018-02-25 18:48:19
+* @Last Modified by:   yukiiyong
+* @Last Modified time: 2018-03-03 19:55:25
 */
 import storage from 'good-storage'
 
@@ -76,4 +76,26 @@ export function savePlay(song) {
 
 export function loadPlay() {
   return storage.get(PLAY_KEY, [])
+}
+
+export function saveFavorite(song) {
+  let songs = storage.get(FAVORITE_KEY, [])
+  insertArray(songs, song, (item) => {
+    return song.id === item.id
+  }, FAVORITE_MAX_LEN)
+  storage.set(FAVORITE_KEY, songs)
+  return songs
+}
+
+export function deleteFavorite(song) {
+  let songs = storage.get(FAVORITE_KEY, [])
+  deleteFromArray(songs, (item) => {
+    return item.id === song.id
+  })
+  storage.set(FAVORITE_KEY, songs)
+  return songs
+}
+
+export function loadFavorite() {
+  return storage.get(FAVORITE_KEY, [])
 }

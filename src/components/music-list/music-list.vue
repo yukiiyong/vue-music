@@ -110,8 +110,9 @@
         let translateY = Math.max(this.minTranslateY, newVal)
         let scale = 1
         let zIndex = 0
-        let blur = 0
+        let blur = 0 //模糊
         const percent = Math.abs(newVal / this.imageHeight)
+        //下拉放大 上拉模糊 下拉newVal>0
         if(newVal > 0) {
           scale = 1 + percent
           zIndex = 10

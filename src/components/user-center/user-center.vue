@@ -1,7 +1,7 @@
 <template>
 	<transition name="slide">
 		<div class="user-center">
-      <div class="back">
+      <div class="back" @click="back">
         <i class="icon-back"></i>
       </div>
       <div class="switches-wrapper">
@@ -11,7 +11,7 @@
         <i class="icon-play"></i>
         <span class="text">随机播放全部</span>
       </div>
-      <div class="list-wrapper">
+      <div class="list-wrapper" ref="listWrapper">
         <scroll class="list-scroll" :data="favoriteList" ref="favoriteList" v-if="currentIndex===0">
           <div class="list-inner">
             <song-list :songs="favoriteList" @select="selectSong"></song-list>
@@ -75,7 +75,7 @@
       ])
     },
     methods: {
-      handlePlayMixin(play) {
+      handlePlaylist(play) {
         const bottom = this.playlist.length > 0 ? '60px' : ''
         this.$refs.listWrapper.style.bottom = bottom
         this.$refs.playHistory && this.$refs.playHistory.refresh()
@@ -117,5 +117,61 @@
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "~common/stylus/variable"
 
-
+  .user-center 
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    width: 100%
+    z-index: 100
+    background: $color-background
+    &.slide-enter-active, &.slide-leave-active
+      transition: all 0.3s
+    &.slide-enter, &.slide-leave-to
+      transform: translate3d(100%, 0, 0)
+    .back
+      position:absolute
+      left: 6px
+      top: 0
+      .icon-back
+        display:block
+        padding: 10px
+        font-size: 22px
+        color: $color-theme
+    .switches-wrapper
+      margin: 10px 0 30px
+    .play-btn
+      margin: 0 auto
+      box-sizing:border-box
+      width: 135px
+      padding: 7px 0
+      text-align: center
+      border 1px solid $color-text-l
+      border-radius: 100px
+      color: $color-text-l
+      font-size: 0
+      .icon-play
+        display: inline-block
+        font-size: $font-size-medium-x
+        margin-right: 6px
+        vertical-align: middle
+      .text
+        display: inline-block
+        font-size: $font-size-small
+        vertical-align: middle
+    .list-wrapper
+      position: absolute
+      top: 110px
+      bottom: 0
+      width: 100%
+      .list-scroll
+        height: 100%
+        overflow: hidden
+        .list-inner
+          padding: 20px 30px
+    .no-result-wrapper
+      position: absolute
+      width: 100%
+      top: 50%
+      transform: translateY(-50%)
 </style>

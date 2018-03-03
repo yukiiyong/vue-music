@@ -60,6 +60,7 @@ export const playerMixin = {
     },
     toggleFavorite(song) {
       if(this.isFavorite(song)) {
+        console.log("aaa")
         this.deleteFavoriteList(song)
       } else {
         this.saveFavoriteList(song)
@@ -83,11 +84,11 @@ export const playerMixin = {
       setPlaylist: 'SET_PLAYLIST',
       setCurrentIndex: 'SET_CURRENT_INDEX',
       setPlayingState: 'SET_PLAYING_STATE'
-    })/*,
+    }),
     ...mapActions([
       'saveFavoriteList',
       'deleteFavoriteList'
-    ])*/
+    ])
   }
 }
 
