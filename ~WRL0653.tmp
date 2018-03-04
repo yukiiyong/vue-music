@@ -1,0 +1,37 @@
+基于Vue.js的音乐播放器
+```概述：
+    该项目是基于Vue.js的移动端音乐播放器，该项目使用vue-cli构建，vue-router作路由跳转，stylus编写样式代码，vuex存取多页面间需要用到的数据。
+    该项目组件化的实现了歌单页、歌手页、歌手详情页、排行榜及排行榜详情页、搜索页、用户中心页。
+    该项目的数据来源于qq音乐，利用jsonp和axios抓取来自qq音乐的接口，当不能直接抓取数据的时候，采用了node进行后端接口代理。还在该项目中实现了类似qq音乐播放器的功能，如展现歌曲进度、图片，歌词左右滑动，播放模式切换、播放器展开收起动画等。
+技术栈：
+    Vue
+    VueX
+    VueRouter
+    Vue-cli
+    Axios
+    Stylus
+    Axios
+难点： 
+    1.player组件： 放在App.vue下，通过Vuex传递数据，触发action提交mutation，从而使播放器开始工作
+    2.歌曲切换： 当歌曲切换过快会导致歌曲播放错误，使用audio的play事件可以在歌曲未准备好时使图标不可点击，从而避免了这个问题
+
+```
+
+## Build Setup
+
+``` 
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# vue-music
