@@ -93,7 +93,9 @@
       .item
         display: flex
         margin: 0 20px 
-        padding-top: 20px 
+        margin-top: 20px 
+        background: #333
+        border-radius: 10px
         height: 100px 
         &:last-child
           padding-bottom:20px
@@ -101,6 +103,9 @@
           flex: 0 0 100px
           width: 100px
           height: 100px 
+          img
+            border-bottom-left-radius: 10px
+            border-top-left-radius: 10px
         .songlist
             flex: 1
             display:flex

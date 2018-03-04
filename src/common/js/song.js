@@ -2,7 +2,7 @@
 * @Author: yuki
 * @Date:   2018-02-12 23:28:58
 * @Last Modified by:   yukiiyong
-* @Last Modified time: 2018-03-04 00:41:36
+* @Last Modified time: 2018-03-04 19:25:35
 */
 import {getLyric} from 'api/song'
 import {ERR_OK} from 'api/config'
@@ -47,8 +47,8 @@ export function createSong(musicData) {
     album: musicData.albumname,
     duration: musicData.interval,
     image: `https://y.gtimg.cn/music/photo_new/T002R300x300M000${musicData.albummid}.jpg?max_age=2592000`,
-    url: `http://ws.stream.qqmusic.qq.com/${musicData.songid}.m4a?fromtag=46`
-    // url: `http://10.151.0.22:9999/dl.stream.qqmusic.qq.com/C400${musicData.songmid}.m4a?fromtag=66`
+    //url: `http://ws.stream.qqmusic.qq.com/${musicData.songid}.m4a?fromtag=46`
+    url: `https:///dl.stream.qqmusic.qq.com/C100${musicData.songmid}.m4a?fromtag=46`
   })
 }
 
