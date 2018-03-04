@@ -60,7 +60,12 @@
 	9、个人中心
 		展现被缓存的收藏列表和播放历史列表（均使用vuex管理）
 效果图：
-   
+   ![Image text](https://github.com/yukiiyong/vue-music/static/recommend.png)
+   ![Image text](https://github.com/yukiiyong/vue-music/static/singer.png)
+   ![Image text](https://github.com/yukiiyong/vue-music/static/singerdetail.png)
+   ![Image text](https://github.com/yukiiyong/vue-music/static/rank.png)
+   ![Image text](https://github.com/yukiiyong/vue-music/static/search.png)
+   ![Image text](https://github.com/yukiiyong/vue-music/static/player.png)
 
 ```
 
