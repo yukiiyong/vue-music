@@ -10,19 +10,16 @@
       </div>
       <div class="filter" ref="filter"></div>
 		</div>
-    <div class="bg-layer" ref="layer"></div>
-    <div class="list-wrapper" ref="list">
-      
-      <scroll :data="songs" @scroll="scroll" 
-              :listenScroll="listenScroll" :probe-type="probeType" class="list" >       
-        <div class="song-list-wrapper">
-          <song-list :songs="songs" :rank="rank" @select="selectItem"></song-list>
-        </div>
-        <div class="loading-container" v-show="!songs.length">
-          <loading></loading>
-        </div>
-      </scroll>
-    </div>   
+    <div class="bg-layer" ref="layer"></div>  
+    <scroll :data="songs" @scroll="scroll" 
+            :listenScroll="listenScroll" :probe-type="probeType" class="list" ref="list">       
+      <div class="song-list-wrapper">
+        <song-list :songs="songs" :rank="rank" @select="selectItem"></song-list>
+      </div>
+      <div class="loading-container" v-show="!songs.length">
+        <loading></loading>
+      </div>
+    </scroll>   
 	</div>
 </template>
 
@@ -74,7 +71,7 @@
     mounted() {
       this.imageHeight = this.$refs.bgImage.clientHeight
       this.minTranslateY = -this.imageHeight + RESERVED_HEIGHT
-      this.$refs.list.style.top = `${this.imageHeight}px`
+      this.$refs.list.$el.style.top = `${this.imageHeight}px`
     },
     methods: {
       handlePlaylist(playlist) {
@@ -211,7 +208,7 @@
       background: $color-background-main
       border-top-left-radius: 8px
       border-top-right-radius: 8px
-    .list-wrapper
+    .list     
       position: fixed
       top: 0
       bottom: 0
@@ -219,13 +216,11 @@
       border-top-left-radius: 8px
       border-top-right-radius: 8px
       background: $color-background-main
-      .list     
-        height: 100%
-        .song-list-wrapper
-          padding: 20px 30px
-        .loading-container  
-          position: absolute
-          width: 100%
-          top: 50%
-          transform: translateY(-50%)
+      .song-list-wrapper
+        padding: 20px 30px
+      .loading-container  
+        position: absolute
+        width: 100%
+        top: 50%
+        transform: translateY(-50%)
 </style>

@@ -1,4 +1,5 @@
 ﻿基于Vue.js的音乐播放器
+预览： https://yukiiyong.github.io/vue-music/dist
 ```概述：
     该项目是基于Vue.js的移动端音乐播放器，该项目使用vue-cli构建，vue-router作路由跳转，stylus编写样式代码，vuex存取多页面间需要用到的数据。
     该项目组件化的实现了歌单页、歌手页、歌手详情页、排行榜及排行榜详情页、搜索页、用户中心页。

@@ -77,7 +77,8 @@
           &.icon2
             bg-image('third')
         .text
-          color: $color-theme
+          color: $color-text-ll
+          font-weight: bold
           font-size: $font-size-large
       .content
         flex: 1

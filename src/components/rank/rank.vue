@@ -92,9 +92,9 @@
       overflow: hidden
       .item
         display: flex
-        margin: 0 20px 
+        margin: 0 10px 
         margin-top: 20px 
-        background: $color-background-d
+        background: $color-background
         border-radius: 10px
         height: 100px 
         &:last-child
