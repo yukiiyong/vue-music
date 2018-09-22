@@ -1,8 +1,8 @@
 /*
 * @Author: yuki
 * @Date:   2018-02-06 01:46:09
-* @Last Modified by:   yukiiyong
-* @Last Modified time: 2018-03-03 19:43:07
+* @Last Modified by:   yuki
+* @Last Modified time: 2018-09-10 00:52:40
 */
 import * as types from './mutation-type'
 import {playMode} from 'common/js/config'
@@ -52,7 +52,7 @@ export const insertSong = function({commit, state}, song) {
 	currentIndex++ 
 
 	playlist.splice(currentIndex, 0, song)
-
+	//playlist exists song
 	if(fpIndex > -1) {
 		if(currentIndex > fpIndex) {
 			playlist.splice(fpIndex, 1)

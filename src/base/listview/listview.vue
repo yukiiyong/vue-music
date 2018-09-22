@@ -178,8 +178,8 @@
         height: 30px
         line-height: 30px
         padding-left: 20px
-        font-size: $font-size-small
-        color: $color-text-l
+        font-size: $font-size-medium
+        color: $color-text-ll
         background: $color-highlight-background
       .list-group-item
         display: flex
@@ -191,7 +191,7 @@
           border-radius: 50%
         .name
           margin-left: 20px
-          color:$color-text-l
+          color:$color-text-ll
           font-size: $font-size-medium
     .list-shortcut
       position: absolute
@@ -221,8 +221,8 @@
         height: 30px
         line-height: 30px
         padding-left: 20px
-        font-size: $font-size-small
-        color: $color-text-l
+        font-size: $font-size-medium
+        color: $color-text-ll
         background: $color-highlight-background
     .loading-container
       position: absolute

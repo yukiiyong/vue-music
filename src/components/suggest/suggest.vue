@@ -5,7 +5,7 @@
           :data="result" 
           :pullup="pullup" 
           :beforeScroll="beforeScroll" 
-          @scrollTpEnd="searchMore" 
+          @scrollToEnd="searchMore" 
           @beforeScroll="listScroll">
     <ul class="suggest-list">
       <li @click="selectItem(item)" class="suggest-item" v-for="item in result">

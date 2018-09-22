@@ -287,6 +287,7 @@
         }
       },
       _getLyric() {
+        // console.log(this.currentSong)
         this.currentSong.getLyric().then((lyric) => {
           if(this.currentSong.lyric !== lyric) {
             return 
@@ -304,6 +305,7 @@
       handleLyric({lineNum, txt}) {
         this.currentLineNum = lineNum
         if(lineNum > 5) {
+          //歌词距离顶部5个歌词位
           let lineEl = this.$refs.lyricLine[lineNum - 5]
           this.$refs.lyricList.scrollToElement(lineEl,1000)
         } else {
@@ -335,6 +337,7 @@
         if(!this.touch.moved) {
           this.touch.moved = true
         }
+        //左负右正
         const left = this.currentShow === 'cd' ? 0 : -window.innerWidth
         const offsetWidth = Math.min(0, Math.max(-window.innerWidth, left + deltaX))
         this.touch.percent = Math.abs(offsetWidth / window.innerWidth)

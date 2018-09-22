@@ -2,7 +2,7 @@
 * @Author: yuki
 * @Date:   2018-02-12 23:28:58
 * @Last Modified by:   yukiiyong
-* @Last Modified time: 2018-03-04 19:25:35
+* @Last Modified time: 2018-09-22 15:27:41
 */
 import {getLyric} from 'api/song'
 import {ERR_OK} from 'api/config'
@@ -24,7 +24,7 @@ export default class Song {
     if(this.lyric) {
       return Promise.resolve(this.lyric)
     }
-
+    //获取歌词并进行base64编码
     return new Promise((resolve, reject) => {
       getLyric(this.mid).then((res) => {
         if(res.retcode === ERR_OK) {

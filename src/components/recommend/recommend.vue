@@ -134,19 +134,22 @@
 						.item
 							float:left
 							width: 100px
-							margin: 0 10px 5px 0				
+							margin: 0 10px 10px 0		
+							background: $color-background-d	
+							border-radius: 5px		
 							.icon	
 								width:100px
 								img
 									border-radius: 5px
 							.text
 								height: 40px
-								overflow:hidden							
+								padding: 5px
+								overflow:hidden			
 								.desc
 									text-overflow: ellipsis 
 									line-height:20px
-									font-size:$font-size-medium
-									color:$color-text-d
+									font-size:$font-size-small
+									color:$color-text-l
 			.loading-container
 				position:absolute
 				width:100%

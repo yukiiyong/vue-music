@@ -128,7 +128,7 @@
     &.slide-enter-active, &.slide-leave-active
       transition: all 0.3s
     &.slide-enter, &.slide-leave-to
-      transform: translate3d(100%, 0, 0)
+      transform: translate3d(-100%, 0, 0)
     .back
       position:absolute
       left: 6px
@@ -139,7 +139,7 @@
         font-size: 22px
         color: $color-theme
     .switches-wrapper
-      margin: 10px 0 30px
+      margin: 5px 0 30px
     .play-btn
       margin: 0 auto
       box-sizing:border-box
@@ -168,7 +168,7 @@
         height: 100%
         overflow: hidden
         .list-inner
-          padding: 20px 30px
+          padding: 10px 30px
     .no-result-wrapper
       position: absolute
       width: 100%
