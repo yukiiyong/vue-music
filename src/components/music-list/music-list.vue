@@ -5,24 +5,24 @@
 		</div>
 		<h1 class="title" v-html="title"></h1>
 		<div class="bg-image" :style="bgStyle" ref="bgImage">
-			<div class="play-wrapper">
-				<div ref="playBtn" v-show="songs.length>0" class="play" @click="random">
-					<i class="icon-play"></i>
-					<span class="text">随机播放全部</span>
-				</div>
-			</div>
-			<div class="filter" ref="filter"></div>
+      <div class="play-icon-wrapper" ref="playBtn" v-show="songs.length>0" @click="random">
+        <img src="../../common/image/play.png" alt="" width="24" height="24" class="play-icon" />
+      </div>
+      <div class="filter" ref="filter"></div>
 		</div>
     <div class="bg-layer" ref="layer"></div>
-    <scroll :data="songs" @scroll="scroll" 
-            :listenScroll="listenScroll" :probe-type="probeType" class="list" ref="list">
-      <div class="song-list-wrapper">
-        <song-list :songs="songs" :rank="rank" @select="selectItem"></song-list>
-      </div>
-      <div class="loading-container" v-show="!songs.length">
-        <loading></loading>
-      </div>
-    </scroll>
+    <div class="list-wrapper" ref="list">
+      
+      <scroll :data="songs" @scroll="scroll" 
+              :listenScroll="listenScroll" :probe-type="probeType" class="list" >       
+        <div class="song-list-wrapper">
+          <song-list :songs="songs" :rank="rank" @select="selectItem"></song-list>
+        </div>
+        <div class="loading-container" v-show="!songs.length">
+          <loading></loading>
+        </div>
+      </scroll>
+    </div>   
 	</div>
 </template>
 
@@ -37,7 +37,6 @@
   const RESERVED_HEIGHT = 40
   const transform = prefixStyle('transform')
   const backdrop = prefixStyle('backdrop-filter')
-
   export default {
     mixins: [playlistMixin],
     props: {
@@ -75,7 +74,7 @@
     mounted() {
       this.imageHeight = this.$refs.bgImage.clientHeight
       this.minTranslateY = -this.imageHeight + RESERVED_HEIGHT
-      this.$refs.list.$el.style.top = `${this.imageHeight}px`
+      this.$refs.list.style.top = `${this.imageHeight}px`
     },
     methods: {
       handlePlaylist(playlist) {
@@ -155,7 +154,7 @@
     left: 0
     bottom: 0
     right: 0
-    background: $color-background
+    background: $color-background-dd
     .back
       position: absolute
       top: 0
@@ -176,7 +175,7 @@
       text-align: center
       line-height: 40px
       font-size: $font-size-large
-      color: $color-text
+      color: $color-theme
     .bg-image
       position: relative
       width: 100%
@@ -184,30 +183,6 @@
       padding-top: 70%
       transform-origin: top
       background-size: cover
-      .play-wrapper
-        position: absolute
-        bottom: 20px
-        z-index: 50
-        width: 100%
-        .play
-          box-sizing: border-box
-          width: 135px
-          margin: 0 auto
-          text-align: center
-          padding: 7px 0
-          border: 1px solid $color-theme
-          color: $color-theme
-          border-radius: 100px
-          font-size: 0
-          .icon-play
-            display: inline-block
-            vertical-align: middle
-            margin-right: 6px
-            font-size: $font-size-medium-x
-          .text
-            display: inline-block
-            vertical-align: middle
-            font-size: $font-size-small
       .filter
         position: absolute
         top: 0
@@ -215,21 +190,42 @@
         width: 100%
         height: 100%
         background: rgba(7, 17, 27, 0.4)
+      .play-icon-wrapper
+        position: absolute
+        bottom: 10px
+        right: 30px
+        width: 38px
+        height: 32px
+        padding: 7px 0 0
+        border-radius: 19px
+        background: $color-background-main
+        text-align: center
+        color: $color-background
+        z-index: 100
+        .play-icon
+          display:inline-block
+          font-size: $font-size-large-x 
     .bg-layer
       position: relative
       height: 100%
-      background: $color-background
-    .list
+      background: $color-background-main
+      border-top-left-radius: 8px
+      border-top-right-radius: 8px
+    .list-wrapper
       position: fixed
-      top: 0 
-      bottom: 0 
+      top: 0
+      bottom: 0
       width:100%
-      background: $color-background
-      .song-list-wrapper
-        padding: 20px 30px
-      .loading-container  
-        position: absolute
-        width: 100%
-        top: 50%
-        transform: translateY(-50%)
+      border-top-left-radius: 8px
+      border-top-right-radius: 8px
+      background: $color-background-main
+      .list     
+        height: 100%
+        .song-list-wrapper
+          padding: 20px 30px
+        .loading-container  
+          position: absolute
+          width: 100%
+          top: 50%
+          transform: translateY(-50%)
 </style>

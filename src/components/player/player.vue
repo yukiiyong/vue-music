@@ -466,7 +466,7 @@
       top: 0
       bottom: 0
       z-index: 150
-      background: $color-background
+      background: $color-background-black
       .background
         position: absolute
         left: 0 
@@ -497,12 +497,12 @@
           text-align: center
           no-wrap()
           font-size: $font-size-large
-          color: $color-text
+          color: $color-text-dd
         .subtitle
           line-height: 20px
           text-align: center
           font-size: $font-size-medium
-          color: $color-text
+          color: $color-text-dd
       .middle
         position: fixed
         width: 100%
@@ -550,7 +550,7 @@
               height: 20px
               line-height: 20px
               font-size: $font-size-medium
-              color: $color-text-l
+              color: $color-text-d
         .middle-r
           display: inline-block
           vertical-align: top
@@ -564,10 +564,10 @@
             text-align: center
             .text
               line-height: 32px
-              color: $color-text-l
+              color: $color-text-d
               font-size: $font-size-medium
               &.current
-                color: $color-text
+                color: $color-text-dd
       .bottom
         position: absolute
         bottom: 50px
@@ -582,11 +582,11 @@
             width: 8px
             height: 8px
             border-radius: 50%
-            background: $color-text-l
+            background: $color-text-d
             &.active
               width: 20px
               border-radius: 5px
-              background: $color-text-ll
+              background: $color-text-dd
         .progress-wrapper
           display: flex
           align-items: center
@@ -671,7 +671,7 @@
           margin-bottom: 2px
           no-wrap()
           font-size: $font-size-medium
-          color: $color-text
+          color: $color-text-dd
         .desc
           no-wrap()
           font-size: $font-size-small

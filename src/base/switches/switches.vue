@@ -44,5 +44,5 @@
       color: $color-text-d
       &.active
         background: $color-highlight-background
-        color: $color-text
+        color: $color-theme
 </style>

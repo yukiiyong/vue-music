@@ -142,7 +142,7 @@
     left: 0
     bottom: 0
     z-index: 200
-    background: $color-background-d
+    background: $color-background-dd
     &.list-fade-enter-active, &.list-fade-leave-active
       transition: opacity 0.3s
       .list-wrapper
@@ -157,7 +157,9 @@
       bottom: 0
       left: 0
       width: 100%
-      background-color: $color-highlight-background
+      background-color: $color-background
+      border-top-left-radius: 8px
+      border-top-right-radius: 8px
       .list-header
         position: relative
         padding: 20px 30px 10px 20px
@@ -167,11 +169,11 @@
           .icon
             margin-right: 10px 
             font-size: 30px
-            color: $color-theme-d
+            color: $color-theme
           .text
             flex: 1
             font-size: $font-size-medium
-            color: $color-text-l
+            color: $color-text-d
           .clear
             extend-click()
             .icon-clear 
@@ -218,9 +220,9 @@
           display: flex
           align-items: center
           padding: 8px 16px
-          border: 1px solid $color-text-l
+          border: 1px solid $color-text-d
           border-radius: 100px
-          color: $color-text-l
+          color: $color-text-dd
           .icon-add
             margin-right: 5px 
             font-size: $font-size-small-s
@@ -229,7 +231,7 @@
       .list-close
         text-align: center
         line-height: 50px 
-        background: $color-background
+        background: $color-background-dd
         font-size: $font-size-medium-x
-        color: $color-text-l
+        color: $color-text-d
 </style>

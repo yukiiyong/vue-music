@@ -21,6 +21,7 @@
     position:relative
     height:44px
     text-align:center
+    background: $color-background
     color:$color-theme
     font-size:0
     .text

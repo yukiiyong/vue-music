@@ -94,7 +94,7 @@
         display: flex
         margin: 0 20px 
         margin-top: 20px 
-        background: #333
+        background: $color-background-d
         border-radius: 10px
         height: 100px 
         &:last-child
@@ -115,7 +115,7 @@
             height: 100px 
             overflow: hidden
             backgrouns: $color-hightlight-background
-            color: $color-text-d
+            color: $color-text-dd
             font-size: $font-size-small
             .song
               no-wrap()

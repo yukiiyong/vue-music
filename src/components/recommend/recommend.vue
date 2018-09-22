@@ -13,7 +13,7 @@
 					</slider>
 				</div>
 				<div class="recommend-list">
-					<h1 class="list-title">热门歌单推荐</h1> 
+					<h1 class="list-title">歌单推荐</h1> 
 					<div class="list-content-wrapper">
 						<ul class="list-content">
 							<li @click="selectItem(item)" v-for="item in discList" class="item">
@@ -123,8 +123,9 @@
 					height:65px
 					line-height:65px
 					text-align:center
-					font-size:$font-size-medium
-					color:$color-theme
+					font-size:$font-size-large
+					font-weight: bold
+					color:$color-text-ll
 				.list-content-wrapper
 					width: 320px
 					margin: 0 auto

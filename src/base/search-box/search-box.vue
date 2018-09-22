@@ -56,17 +56,17 @@
     border-radius: 6px 
     .icon-search
       font-size: 24px
-      color: $color-text-ll
+      color: $color-text-dd
     .box
       flex: 1
       margin: 0 5px 
       line-height: 18px
       background: $color-highlight-background
-      color: $color-text
+      color: $color-text-dd
       font-size: $font-size-medium
       &::placeholder
-        color: $color-text-l
+        color: $color-text-dd
     .icon-dismiss
       font-size: 16px
-      color: $color-text-l
+      color: $color-text-dd
 </style>

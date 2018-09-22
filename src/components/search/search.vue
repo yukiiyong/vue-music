@@ -138,7 +138,8 @@
       .search-title
         font-size: $font-size-large
         line-height: 42px
-        color: $color-text
+        color: $color-theme
+        font-weight: bold
         text-align: center
         z-index: 44
         no-wrap()
@@ -155,7 +156,7 @@
       margin: 20px 
     .shortcut-wrapper
       position: fixed
-      top: 170px
+      top: 150px
       bottom: 0
       width: 100%
       .shortcut
@@ -175,7 +176,7 @@
             border-radius: 6px
             background: $color-highlight-background
             font-size: $font-size-medium
-            color: $color-text-l
+            color: $color-text-dd
         .search-history
           position: relative
           margin: 0 20px

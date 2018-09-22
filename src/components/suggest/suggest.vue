@@ -115,6 +115,7 @@
         }
       },
       _genResult(data) {
+        console.log(data)
         let ret = []
         if(data.zhida && data.zhida.singerid) {
           ret.push({...data.zhida, ...{type: TYPE_SINGER}})

@@ -171,7 +171,6 @@
     width: 100%
     height: 100%
     overflow: hidden
-    background: $color-background
     .list-group
       padding-bottom:30px
       .list-group-title
@@ -179,7 +178,7 @@
         line-height: 30px
         padding-left: 20px
         font-size: $font-size-medium
-        color: $color-text-ll
+        color: $color-text-dd
         background: $color-highlight-background
       .list-group-item
         display: flex
@@ -203,12 +202,12 @@
       padding: 20px 0
       border-radius: 10px
       text-align: center
-      background: $color-background-d
+      background: $color-highlight-background
       font-family: Helvetica
       .item
         padding: 3px
         line-height:1
-        color: $color-text-l
+        color: $color-text-d
         font-size: $font-size-small
         &.current
           color: $color-theme
@@ -222,7 +221,7 @@
         line-height: 30px
         padding-left: 20px
         font-size: $font-size-medium
-        color: $color-text-ll
+        color: $color-text-dd
         background: $color-highlight-background
     .loading-container
       position: absolute

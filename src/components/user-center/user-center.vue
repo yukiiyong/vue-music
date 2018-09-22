@@ -1,16 +1,18 @@
 <template>
 	<transition name="slide">
 		<div class="user-center">
-      <div class="back" @click="back">
-        <i class="icon-back"></i>
-      </div>
-      <div class="switches-wrapper">
-        <switches :switches="switches" :currentIndex="currentIndex" @switch="switchItem"></switches>
-      </div> 
-      <div class="play-btn" @click="random">
-        <i class="icon-play"></i>
-        <span class="text">随机播放全部</span>
-      </div>
+      <div class="header">
+        <div class="back" @click="back">
+          <i class="icon-back"></i>
+        </div>
+        <div class="switches-wrapper">
+          <switches :switches="switches" :currentIndex="currentIndex" @switch="switchItem"></switches>
+        </div> 
+        <div class="play-btn" @click="random">
+          <i class="icon-play"></i>
+          <span class="text">随机播放全部</span>
+        </div>
+      </div>      
       <div class="list-wrapper" ref="listWrapper">
         <scroll class="list-scroll" :data="favoriteList" ref="favoriteList" v-if="currentIndex===0">
           <div class="list-inner">
@@ -129,26 +131,31 @@
       transition: all 0.3s
     &.slide-enter, &.slide-leave-to
       transform: translate3d(-100%, 0, 0)
-    .back
-      position:absolute
-      left: 6px
-      top: 0
-      .icon-back
-        display:block
-        padding: 10px
-        font-size: 22px
-        color: $color-theme
-    .switches-wrapper
-      margin: 5px 0 30px
+    .header
+      position: relative
+      padding-bottom: 10px
+      overflow:hidden
+      .back
+        position:absolute
+        left: 6px
+        top: 0
+        .icon-back
+          display:block
+          padding: 10px
+          font-size: 22px
+          color: $color-theme
+      .switches-wrapper
+        margin: 5px 0 12px
     .play-btn
       margin: 0 auto
       box-sizing:border-box
       width: 135px
       padding: 7px 0
       text-align: center
-      border 1px solid $color-text-l
+      background: $color-background-dd
+      border 1px solid $color-text-d
       border-radius: 100px
-      color: $color-text-l
+      color: $color-theme
       font-size: 0
       .icon-play
         display: inline-block
@@ -164,6 +171,9 @@
       top: 110px
       bottom: 0
       width: 100%
+      border-top-left-radius: 8px
+      border-top-right-radius: 8px
+      background: $color-background-main
       .list-scroll
         height: 100%
         overflow: hidden
